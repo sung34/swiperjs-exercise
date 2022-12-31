@@ -1,0 +1,65 @@
+@import url('common.css');
+
+main {
+  position:relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.swiper {
+  width: calc(var(--slide-width) * 3);
+  height: calc(var(--slide-height) * 1);
+  position:relative;
+}
+
+.swiper-slide {
+  color: var(--color-orange);
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.swiper-slide:nth-child(even) {
+  background-color: var(--color-indigo);
+}
+
+.swiper-button-next {
+  background-image: url(../static/svg/sidebar-right.svg);
+}
+
+.swiper-button-prev {
+  background-image: url(../static/svg/sidebar-left.svg);
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  background-size: 35px 50px;
+  background-position: center;
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 216, 143));
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper .swiper-pagination-bullet {
+  cursor: pointer;
+  background: none;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-orange);
+  transition: all 0.5s;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-orange);
+  border: 2px solid var(--color-yellow);
+  width: 30px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}

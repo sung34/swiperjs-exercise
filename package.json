@@ -20,5 +20,8 @@
   "homepage": "https://github.com/sung34/swiperjs-exercise#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "swiper": "^8.4.5"
   }
 }
