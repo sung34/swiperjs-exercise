@@ -9,10 +9,10 @@
   text-align: center;
 }
 .navigation a {
+  width: 100%;
   color: var(--color-orange);
   text-decoration: none;
-  background-color: none;
-  width: calc(var(--slide-width) * 2);
+  background-color: transparent;
   padding: 5px 0;
   margin-bottom: 15px;
   border: 1px solid var(--color-orange);

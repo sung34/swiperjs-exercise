@@ -30,6 +30,7 @@ body {
 
 .inner {
   width: 720px;
+  margin: 0 auto;
 }
 
 .btn {
