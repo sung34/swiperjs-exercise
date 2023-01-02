@@ -1,5 +1,5 @@
-// SCROLL LISTENER FOR FADE-IN EFFECT AND RELOCATION OF CONTROLLER STATES
-//25 ~ 75 text
+/* SCROLL DOWN FADE-OUT CONTROLLER CAPTION 
+   SCROLL LITTLE BIT MORE MOVES GO BACK BUTTON TO THE LEFT*/
 const controllerCaption = document.querySelector('#controller-caption');
 const backBtn = document.querySelector('#backBtn');
 const controllerImages = document.querySelector('.controller-img');
@@ -23,9 +23,11 @@ window.addEventListener('scroll', () => {
   
 });
 
-// MOUSEWHEEL AND KEYBOARD LISTENER FOR SLIDE PREV AND NEXT
+// MOUSEWHEEL AND KEYBOARD EVENT LISTENER FOR SLIDE PREV AND NEXT
 const mousewheelIcon = document.querySelector("#mousewheelIcon");
 const keyboardIcon = document.querySelector("#keyboardIcon");
+
+// MOUSEWHEEL
 window.onwheel = () => {
   mousewheelIcon.style.opacity = 1;
   mousewheelIcon.style.animation =
@@ -34,6 +36,7 @@ window.onwheel = () => {
   keyboardIcon.style.animation = "none";
 };
 
+// KEYBOARD LEFT ARROW AND RIGHT ARROW
 window.onkeydown = (keyEvent) => {
   if (keyEvent.key === "ArrowRight" || keyEvent.key === "ArrowLeft") {
     mousewheelIcon.style.opacity = 0.5;
@@ -45,10 +48,11 @@ window.onkeydown = (keyEvent) => {
 };
 
 
-//SLIDERS BY ITS EFFECT STYLES
+//SWIPERS
+// SWIPERS WITH CARD SHUFFLE EFFECT
 const cardSwiper = new Swiper("#card-swiper", {
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   mousewheel: true,
   keyboard: {
     enabled: true,
@@ -78,6 +82,7 @@ const cardSwiper = new Swiper("#card-swiper", {
   },
 });
 
+// SWIPERS WITH SPINNING CUBE EFFECT
 const cubeSwiper = new Swiper("#cube-swiper", {
   centeredSlides: true,
   loop: true,
@@ -106,9 +111,10 @@ const cubeSwiper = new Swiper("#cube-swiper", {
   cubeEffect: true,
 });
 
+// SWIPERS WITH FLIPPING EFFECT
 const flipSwiper = new Swiper("#flip-swiper", {
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   mousewheel: true,
   keyboard: {
     enabled: true,
@@ -134,6 +140,7 @@ const flipSwiper = new Swiper("#flip-swiper", {
   flipEffect: true,
 });
 
+// SWIPERS WITH COVERFLOW EFFECT
 const coverflowSwiper = new Swiper("#coverflow-swiper", {
   slidesPerView: 3,
   mousewheel: true,

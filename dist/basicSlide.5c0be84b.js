@@ -118,8 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/basicSlide.js":[function(require,module,exports) {
-// SCROLL LISTENER FOR FADE-IN EFFECT AND RELOCATION OF CONTROLLER STATES
-//25 ~ 75 text
+/* SCROLL DOWN FADE-OUT CONTROLLER CAPTION 
+   SCROLL LITTLE BIT MORE MOVES GO BACK BUTTON TO THE LEFT*/
 var controllerCaption = document.querySelector('#controller-caption');
 var backBtn = document.querySelector('#backBtn');
 var controllerImages = document.querySelector('.controller-img');
@@ -137,15 +137,19 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// MOUSEWHEEL AND KEYBOARD LISTENER FOR SLIDE PREV AND NEXT
+// MOUSEWHEEL AND KEYBOARD EVENT LISTENER FOR SLIDE PREV AND NEXT
 var mousewheelIcon = document.querySelector("#mousewheelIcon");
 var keyboardIcon = document.querySelector("#keyboardIcon");
+
+// MOUSEWHEEL
 window.onwheel = function () {
   mousewheelIcon.style.opacity = 1;
   mousewheelIcon.style.animation = "beating 0.8s linear infinite";
   keyboardIcon.style.opacity = 0.5;
   keyboardIcon.style.animation = "none";
 };
+
+// KEYBOARD LEFT ARROW AND RIGHT ARROW
 window.onkeydown = function (keyEvent) {
   if (keyEvent.key === "ArrowRight" || keyEvent.key === "ArrowLeft") {
     mousewheelIcon.style.opacity = 0.5;
@@ -155,10 +159,11 @@ window.onkeydown = function (keyEvent) {
   }
 };
 
-//SLIDERS BY ITS EFFECT STYLES
+//SWIPERS
+// SWIPERS WITH CARD SHUFFLE EFFECT
 var cardSwiper = new Swiper("#card-swiper", {
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   mousewheel: true,
   keyboard: {
     enabled: true,
@@ -184,6 +189,8 @@ var cardSwiper = new Swiper("#card-swiper", {
     rotate: true
   }
 });
+
+// SWIPERS WITH SPINNING CUBE EFFECT
 var cubeSwiper = new Swiper("#cube-swiper", {
   centeredSlides: true,
   loop: true,
@@ -208,9 +215,11 @@ var cubeSwiper = new Swiper("#cube-swiper", {
   effect: "cube",
   cubeEffect: true
 });
+
+// SWIPERS WITH FLIPPING EFFECT
 var flipSwiper = new Swiper("#flip-swiper", {
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   mousewheel: true,
   keyboard: {
     enabled: true,
@@ -232,6 +241,8 @@ var flipSwiper = new Swiper("#flip-swiper", {
   effect: "flip",
   flipEffect: true
 });
+
+// SWIPERS WITH COVERFLOW EFFECT
 var coverflowSwiper = new Swiper("#coverflow-swiper", {
   slidesPerView: 3,
   mousewheel: true,
@@ -286,7 +297,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53606" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58432" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

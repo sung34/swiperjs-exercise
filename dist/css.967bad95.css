@@ -10,7 +10,7 @@ iframe {border:0}
 table {border-collapse:collapse;border-spacing:0}
 td, th {padding:0}
 
-
+/* VARIABLES */
 html {
   --color-bg: #000814;
   --color-grey: #797b81;
@@ -18,15 +18,18 @@ html {
   --color-blue: #003566;
   --color-orange: #ffc300;
   --color-yellow: #ffd60a;
-  --slide-width: 200px;
-  --slide-height: 200px;
+  --slide-length: 150px;
 }
 
+/* COMMON STYLES */
 body {
   background-color: var(--color-bg);
   width: 100%;
-  min-width: 480px;
   box-sizing: border-box;
+}
+
+.inner {
+  width: 720px;
 }
 
 .btn {
@@ -46,6 +49,29 @@ body {
   border: 1px solid var(--color-yellow);
   transform: scale(1.02);
 }
+
+/* MEDIA QUERRY */
+@media (max-width: 780px) {
+  .inner {
+    width: 480px;
+  }
+  .btn {
+    background-color: var(--color-orange);
+    color: var(--color-bg);
+  }
+}
+
+@media (max-width: 420px) {
+  .inner {
+    width: 320px;
+  }
+  .btn {
+    background-color: var(--color-orange);
+    color: var(--color-bg);
+  }
+}
+
+
 .navigation {
   height: 100vh;
   display: flex;
